@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PGGCodeScanning.h
 //  PGGQRCode
 //
 //  Created by 陈鹏 on 2017/10/20.
@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-
+/**
+ 二维码扫描
+ */
+@interface PGGCodeScanning : UIViewController
++ (UIImage *)imageSizeWithScreenImage:(UIImage *)image;//判断图片尺寸
 @end
-

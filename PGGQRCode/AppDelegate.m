@@ -4,9 +4,12 @@
 //
 //  Created by 陈鹏 on 2017/10/20.
 //  Copyright © 2017年 penggege.CP. All rights reserved.
-//
+//GitHub地址    https://github.com/penghero/PGGQRCode.git
+
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "IQKeyboardManager.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
+    self.window = [[UIWindow alloc] initWithFrame: [UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    ViewController *view = [[ViewController alloc] init];
+    UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:view];
+    self.window.rootViewController = navigation;
+    [self.window makeKeyWindow];
     return YES;
 }
 
